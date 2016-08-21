@@ -9,12 +9,14 @@ class Movie():
     MovieDescription = ""
     
     def __init__(self, Name, Link, Image, Description):
+        ''' Initialize class function '''
         self.MovieName = Name
         self.MovieLink = Link
         self.MovieImage = Image
         self.MovieDescription = Description
 
     def GetHTMLAttribute(self):
+        ''' Converts Movie class data to html format '''
         HTML =  '''
         <div class = "MovieElement">
         <h2> MovieName </h2>
@@ -29,6 +31,7 @@ class Movie():
         return HTML
 
 def CreateMovies():
+    ''' Simple function to create a list of movies '''
 
     MovieList = []
 
@@ -41,6 +44,7 @@ def CreateMovies():
     return MovieList
 
 def CreateHTML(MovieList):
+    ''' Creates a string formated for html and inserts the movie html into it '''
     HTML = '''
 <!DOCTYPE html>
 <html>
